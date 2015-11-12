@@ -1,0 +1,43 @@
+<ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd"
+	version="3.1">
+  <enterprise-beans>
+     
+    <session>
+      <ejb-name>ConfigrationBean</ejb-name>
+      <session-type>Stateless</session-type>
+      <!-- profile -->
+      <env-entry>
+        <env-entry-name>PROFILE_ENV</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>development</env-entry-value>
+      </env-entry>
+	  <!-- test env -->      
+      <env-entry>
+        <env-entry-name>development.javax8extra.testenv</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>dev.envtest</env-entry-value>
+      </env-entry>
+      <env-entry>
+        <env-entry-name>production.javax8extra.testenv</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>prod.envtest</env-entry-value>
+      </env-entry>
+      
+      <!-- test service env -->
+       <env-entry>
+        <env-entry-name>development.javax8extra.service.auth.testenv</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>javax8extra.service.auth.devEnv</env-entry-value>
+      </env-entry>
+      <env-entry>
+        <env-entry-name>production.javax8extra.service.auth.prodEnv</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>javax8extra.service.auth.prodEnv</env-entry-value>
+      </env-entry>
+    </session>
+    
+    
+    
+  </enterprise-beans>
+</ejb-jar>

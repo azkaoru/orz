@@ -1,0 +1,2 @@
+#あらかじめcli-settingsフォルダにあるpostgresqlをC:\wildfly-9.0.0.Alpha1\modules\system\layers\base\orgにコピーしてください
+/subsystem=datasources/jdbc-driver=postgres9-xadriver:add(driver-name=postgres9-xadriver,driver-module-name=org.postgresql,driver-xa-datasource-class-name=org.postgresql.xa.PGXADataSource)

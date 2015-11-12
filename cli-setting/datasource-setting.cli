@@ -1,0 +1,11 @@
+batch
+
+xa-data-source add --name=postgresDS --jndi-name=java:/jboss/datasources/PostgresDS --driver-name=postgres9-xadriver --user-name=postgres --password=postgres
+
+/subsystem=datasources/xa-data-source="postgresDS"/xa-datasource-properties=ServerName:add(value="localhost")
+
+/subsystem=datasources/xa-data-source="postgresDS"/xa-datasource-properties=PortNumber:add(value="5433")
+
+/subsystem=datasources/xa-data-source="postgresDS"/xa-datasource-properties=DatabaseName:add(value="sampledb")
+
+run-batch
